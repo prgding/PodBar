@@ -221,7 +221,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         refreshItem.isEnabled = request == nil && !sleeping
         updateLoginItem()
         let accessibility = "PodBar，\(device?.name ?? "AirPods")，\(status)，左耳 \(percent(device?.left))，右耳 \(percent(device?.right))"
-        statusItem.button?.toolTip = accessibility
+        statusItem.button?.toolTip = nil
         statusItem.button?.setAccessibilityLabel(accessibility)
     }
 
